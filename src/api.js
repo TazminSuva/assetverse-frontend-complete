@@ -40,7 +40,7 @@ export const authAPI = {
   login: (email, password) => apiClient.post('/auth/login', { email, password }),
 };
 
-// ============= ASSET APIS =============
+// ============= ASSET APIS ===========
 
 export const assetAPI = {
   addAsset: (data) => apiClient.post('/assets', data),
