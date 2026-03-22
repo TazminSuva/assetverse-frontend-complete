@@ -1,0 +1,178 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables */
+:root {
+  --primary: #0ea5e9;
+  --primary-focus: #0284c7;
+  --accent: #22c55e;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Base Styles */
+* {
+  @apply transition-colors duration-200;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base-100 text-base-content font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold;
+}
+
+/* Custom Components */
+.btn {
+  @apply rounded-lg font-semibold transition-all duration-300;
+}
+
+.btn:hover {
+  @apply transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary to-primary-focus;
+}
+
+.card {
+  @apply rounded-xl bg-base-100;
+}
+
+.input, .select, .textarea {
+  @apply rounded-lg border-base-300;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  @apply border-primary outline-none ring-2 ring-primary ring-opacity-30;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Utility Classes */
+.glass-effect {
+  @apply bg-white/30 backdrop-blur-md border border-white/20 rounded-xl;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.15);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-focus;
+}
+
+/* Loading Spinner */
+.loading {
+  @apply border-4 border-base-300 border-t-primary;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  @apply absolute w-0 h-0 p-0 -m-[1px] overflow-hidden whitespace-nowrap border-0;
+}
+
+/* Focus Visible */
+*:focus-visible {
+  @apply outline-2 outline-primary outline-offset-2;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    @apply hidden;
+  }
+}
