@@ -73,7 +73,7 @@ export const employeeAPI = {
   returnAsset: (id) => apiClient.put(`/return-asset/${id}`),
 };
 
-// ============= USER APIS =============
+// ============= USER APIS ==========
 
 export const userAPI = {
   getProfile: () => apiClient.get('/user/profile'),
