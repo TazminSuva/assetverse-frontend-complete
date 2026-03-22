@@ -32,7 +32,7 @@ apiClient.interceptors.response.use(
   }
 );
 
-// ============= AUTH APIS ===========
+// ============AUTH APIS ===========
 
 export const authAPI = {
   registerHR: (data) => apiClient.post('/auth/register-hr', data),
