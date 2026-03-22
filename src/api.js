@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://assetverse-backend-topaz.vercel.app/api/auth/login';
+const API_URL = import.meta.env.VITE_API_URL || 'https://assetverse-backend-topaz.vercel.app/api';
 
 // Create axios instance
 const apiClient = axios.create({
