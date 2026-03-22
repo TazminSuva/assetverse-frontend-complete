@@ -80,7 +80,7 @@ export const userAPI = {
   updateProfile: (data) => apiClient.put('/user/profile', data),
 };
 
-// ============= PUBLIC APIS ==========
+// ========= PUBLIC APIS ==========
 
 export const publicAPI = {
   getPackages: () => apiClient.get('/packages'),
