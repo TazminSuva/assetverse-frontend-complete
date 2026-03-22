@@ -79,8 +79,7 @@ const RequestAsset = () => {
             <h1 className="text-4xl font-bold text-base-900">Request an Asset</h1>
             <p className="text-base-600 mt-2">Browse and request assets from your company</p>
           </motion.div>
-
-          {/* Search & Filter */}
+  {/* Search & Filter */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
