@@ -87,7 +87,7 @@ export const publicAPI = {
   getStats: () => apiClient.get('/stats'),
 };
 
-// ============= HEALTH CHECK ========
+// ======== HEALTH CHECK ========
 
 export const healthAPI = {
   check: () => apiClient.get('/health'),
