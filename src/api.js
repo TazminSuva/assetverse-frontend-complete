@@ -50,7 +50,7 @@ export const assetAPI = {
   deleteAsset: (id) => apiClient.delete(`/assets/${id}`),
 };
 
-// ============= HR APIS ===========
+// =========== HR APIS ===========
 
 export const hrAPI = {
   getEmployees: () => apiClient.get('/employees'),
