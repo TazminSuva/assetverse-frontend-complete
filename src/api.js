@@ -65,7 +65,7 @@ export const requestAPI = {
   rejectRequest: (id) => apiClient.put(`/requests/${id}/reject`),
 };
 
-// ============= EMPLOYEE APIS =============
+// ============= EMPLOYEE APIS ==========
 
 export const employeeAPI = {
   getMyAssets: () => apiClient.get('/my-assets'),
